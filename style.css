@@ -1,0 +1,627 @@
+﻿@charset "utf-8";
+/*
+Theme Name: Light Sakuraba
+Description:Hikari Sakurada is so cute!
+Theme URI: https://honeycome.net
+Author: Hikari Sakurada
+Author URI: https://twitter.com/sudosan
+Version: 0.0.1
+License: MIT License
+License URI: https://opensource.org/licenses/mit-license.php
+*/
+body {
+  background-color: #FCF95D;
+  margin: 0;
+}
+* {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ W3 JIS2004" , "Hiragino Kaku Gothic W3 JIS2004",  "Yu Gothic UI", "游ゴシック体", "Yu Gothic", YuGothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, Osaka, sans-serif;
+}
+p {
+  font-weight: 200;
+  font-size: 18px;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 15px;
+}
+h1,h2,h3,h4,h5,h6,p {
+  color: #212121;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 400;
+}
+a {
+  color: rgb(33, 40, 200);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(64, 71, 222);
+  /*text-decoration: underline;*/
+  text-shadow: 2px 2px 4px rgba(100, 100, 100, 0.7);
+}
+hr {
+  background-color: rgb(17, 22, 130);
+  width: 100%;
+  height: 2px;
+  /*box-shadow: 0 1px 1px rgba(0,0,0,0.7);*/
+}
+img,video {
+  display: block;
+  max-width: 100%;
+  box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
+  border: 1px solid #212121;
+  border-collapse: collapse;
+  box-shadow: 0 2px 3px rgba(100, 100, 100, 0.3);
+}
+th,td {
+  border : 1px solid #757575;
+}
+tr {
+  background-color: #e2eaf6;
+}
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+/* 参考にした
+ * http://o-ands.net/blockquote-css-design-temple/
+ */
+blockquote {
+  margin-left: 10%;
+  padding: 40px 20px 40px 20px;
+  border-radius: 0 4px 4px 0;
+  background-color: #dcdcdc;
+  position:relative;
+  border-left:3px solid #000149;
+  box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.3);
+}
+blockquote:before{
+  content:"“";
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
+  font-size:100px;
+  line-height:1em;
+  color:#33376c;
+  position:absolute;
+  left:0;
+  top:0;
+}
+blockquote:after{
+  content:"”";
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
+  font-size:100px;
+  line-height:0em;
+  color:#33376c;
+  position:absolute;
+  right:0;
+  bottom:0;
+}
+blockquote p{
+  margin:0;
+}
+cite {
+  margin-left: 10%;
+  font-style:oblique;
+}
+pre {
+  word-wrap: break-word;
+}
+.required {
+    font-weight: 600;
+    color: 600;
+}
+/*WP必須のアレ*/
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignright { 
+  margin-left: auto;
+}
+.alignleft { 
+  margin-right: auto;
+}
+.wp-caption {
+    
+}
+.wp-caption-text {
+    
+}
+.sticky {}
+.bypostauthor {}
+.gallery-caption {}
+.screen-reader-text {}
+/*テーマのCSS*/
+.pagesite {
+  min-height: calc(80vh - 104px);
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding-top: 0;
+  background-color: rgba(255, 255, 255, 0.35);
+  padding-left : 0vw;
+  padding-right : 0vw;
+  /*境界線*/
+  border: 2px solid rgb(33, 40, 200);
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+  /*でかいPC*/
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.footer {
+  margin: 0px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  background-color:rgb(33, 40, 200);
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.footer > p {
+  color: white;
+  padding: 0px 2vw 0px 2vw;
+}
+.footer > p > a {
+  color: white;
+}
+.widgettitle {
+  font-size: 20px;
+}
+.header {
+  /*border-bottom: 2px solid rgba(255,255,0,0.7);*/
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px 6px 0px 0px;
+}
+.menu {
+  background-color: rgb(33, 40, 200);
+  box-shadow: 0 2px 1px rgba(0,0,0,0.7);
+  padding: 0px;
+  min-height: 20px;
+  /*
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+  */
+}
+.menu > ul {
+  padding: 0;
+  margin:0;
+}
+.menu > ul > li {
+  display: inline-block;
+}
+.menu > ul > li > a {
+  border-width: 0px 1px 0px 0px;
+  border-style: solid;
+  border-color: white;
+  /*box-shadow: 1px 1px 3px #000;*/
+  padding: 0px 15px 0px 15px;
+  margin-left: 0px;
+  color: white;
+  /*
+  display: table-cell;
+  vertical-align: middle;
+  */
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.menu > ul > li > a:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.box {
+  margin: 7px 5px 7px 5px;
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+  padding: 7px;
+  background-size: 6px 6px;
+  background-color: rgba(253,255,255,0.5);
+  background-image: linear-gradient(-45deg, rgba(255,255,255,0.7) 25%, transparent 25%,
+          transparent 50%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.7) 75%,
+          transparent 75%, transparent);
+}
+.icon {
+  float: none;
+}
+.icon > img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 20px;
+}
+.main-column {
+  background-color: white;
+  border-radius: 3px;
+  margin:7px 5px 7px 5px;
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+  padding: 7px;
+}
+div.post,div.page {
+  font-size: 20px;
+  line-height: 1.7;
+}
+.n700 {
+  background-color: rgb(17, 22, 130);
+  width: 100%;
+  height: 25px;
+  position: relative;
+  border: 0;
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+.n700::before {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  top:15px;
+  position: absolute;
+  z-index: 0;
+}
+.n700::after {
+  content: "";
+  display: block;
+  width: 0;
+	height: 0;
+  border-style: solid;
+  border-width: 0 0 27px 150px;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 0;
+}
+.n700 > h3 {
+  position: absolute;
+  width:2.5em;
+  top:0;
+  left: 10px;
+  margin: 0;
+  text-align: center;
+  background-color: white;
+  background-origin: content-box;
+  z-index: 1;
+  color: rgb(17, 22, 130);
+  font-weight: 600;
+}
+.n700 > .tokio {
+  content : "AMBITIOUS JAPAN!";
+  width: 11em;
+  font-style:oblique;
+}
+.n700 > #comments {
+  width:4em;
+}
+.content > a {
+text-decoration: none;
+color : #212121;
+}
+.content > a >.box {
+margin: 5px;
+border:4px solid transparent;
+transition: border 0.1s ease-in-out;
+}
+.content > a > .box:hover {
+border: 4px solid rgba(33, 40, 200, 0.8);
+cursor: pointer;
+text-shadow: none;
+}
+.pager {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.previous-link {
+    text-align: left;
+    float: left;
+}
+.next-link {
+    text-align: right;
+}
+.active {
+color: #212121;
+font-weight: bold;
+text-shadow: none;
+pointer-events : none;
+cursor: default;
+}
+.page-link {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 2px;
+}
+.page-link-text {
+  margin: 20px;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 15px;
+  background-color: rgb(5, 7, 40);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+a > span.page-link-text {
+  background-color: rgb(17, 22, 130);
+  transition: background-color .3s ease-in-out;
+}
+a > span.page-link-text:hover {
+  background-color: rgb(5, 7, 40);
+}
+.just {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0;
+}
+.just > li {
+  display: table-cell;
+  vertical-align: middle;
+}
+.relate > ul> li > p {
+  font-size: 12px;
+}
+.share {
+    margin: 45px 0 45px 0;
+}
+.share > a {
+  display:inline-block;
+  border-radius: 3px;
+  padding: 15px;
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+.share > a:hover {
+  color: white;
+}
+.twitter {
+  background-color: rgb(23, 158, 255);
+  color: white;
+}
+.twitter:hover {
+  background-color: rgb(30, 99, 148);
+}
+.facebook {
+  background-color: rgb(17, 22, 130);
+  color: white;
+}
+.facebook:hover {
+  background-color: rgb(5, 7, 40);
+}
+.line {
+  background-color: rgb(32, 161, 0);
+  color: white;
+}
+.line:hover {
+  background-color: rgb(13, 56, 2);
+}
+.meta > p {
+  font-size:15px;
+  line-height: 1.5;
+  margin: 10px 0 10px 0;
+}
+#submit {
+  border-radius: 3px;
+  font-size: 20px;
+  border:0;
+  padding: 15px;
+  margin: 5px;
+  background-color: rgb(17, 22, 130);
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+#submit:hover {
+  background-color: rgb(5, 7, 40);
+}
+textarea {
+  height: 10vh;
+}
+#comment,#author,#email,#url,.searchform {
+  background: rgba(128, 128, 128, 0.1);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  width: calc(100% - 30px);
+  margin: 10px;
+  border-radius: 3px;
+}
+#comment,#author,#email,#url {
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: 20px;
+}
+.searchform {
+  border: 3px solid rgb(33, 40, 200);
+  font-size: 25px;
+}
+form > h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tag {
+  border: 1px solid rgba(17, 22, 130,0.6);
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+  border-radius: 1px;
+  margin: 2px;
+  padding: 2px;
+  transition: background-color .3s ease-in-out;
+}
+.tag:hover {
+  color: white;
+  background-color: rgb(17, 22, 130);
+}
+.loop-nav {
+  line-height: 0.7;
+}
+.comment-view > img {
+  float: left;
+  border-radius: 100%;
+  border: 2px solid rgba(60, 60, 60, 0.5);
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+  width: 96px;
+  height: 96px;
+}
+.comment-main-text {
+  border: 1px solid rgba(30, 30, 30, 0.2);
+  background-color: rgba(170, 170, 170, 0.2);
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+  padding: 20px 42px 30px 20px;
+  margin: 0;
+}
+.comment-info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.comment-info > h3,.comment-info > p {
+  font-size: 16px;
+  color: rgb(70, 70, 70);
+}
+.comment-main {
+  position: relative;
+  margin: 5px;
+}
+.comment-reply-link {
+  position:absolute;
+  cursor: pointer;
+  background-color: rgb(17, 22, 130);
+  padding: 5px;
+  right: 0;
+  bottom: 0;
+  color: white;
+  border-radius: 2px;
+}
+.comment-reply-link:hover {
+  color: white;
+  background-color: rgb(5, 7, 40);
+}
+.none {
+  margin: 20px;
+}
+/* https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*クリアフィックス*/
+.cf:before,
+.cf:after{
+  content:"";
+  display: table;
+}
+.cf:after{
+  clear:both;
+}
+/*メディアクエリ*/
+@media screen and (min-width: 768px) {
+  .main {
+    margin-right: -300px;
+    width: 100%;
+    float: left;
+  }
+  .main > .content,.main-column {
+    margin-right: 300px;
+  }
+  .sidebar {
+    width: 300px;
+    float: right;
+  }
+  .icon {
+    float: left;
+  }
+  .icon > img {
+    width: 150px;
+    height: 150px;
+  }
+  .text {
+    padding-left: 160px;
+  }
+}
+@media screen and (max-width: 1690px) {
+  .pagesite {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+  .footer {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .pagesite {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .footer {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .pagesite {
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+  .footer {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+}
+@media screen and (max-width: 960px) {
+  .pagesite {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pagesite {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+@media print {
+  body{
+  background: none;
+  }
+  .pagesite,div.post {
+    margin:0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+  .header,.menu,.sidebar,.footer {
+    display: none;
+  }
+}
